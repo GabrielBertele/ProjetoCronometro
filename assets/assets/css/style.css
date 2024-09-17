@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #115666;
+  --primary-color-darker: #093038;
+  --secondary-color: #4FC3F7;
+  --font-color: #FFFFFF;
+  --button-hover-color: #0288D1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #115666, #093038);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--font-color);
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.relogio {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
+
+.relogio.pulsando {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background: var(--primary-color);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--button-hover-color);
+}
+
+.pausado {
+  color: red;
+}
